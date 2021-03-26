@@ -16,7 +16,6 @@ class CartView extends GetView<CartController> {
                   Container(
                     margin: EdgeInsets.only(left: 16, right: 16, top: 16),
                     decoration: BoxDecoration(
-                        color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(16))),
                     child: Row(
                       children: <Widget>[
@@ -41,11 +40,8 @@ class CartView extends GetView<CartController> {
                               children: <Widget>[
                                 Container(
                                   padding: EdgeInsets.only(right: 8, top: 4),
-                                  child: Text(
-                                    "NIKE XTM Basketball Shoeas",
-                                    maxLines: 2,
-                                    softWrap: true
-                                  ),
+                                  child: Text("NIKE XTM Basketball Shoeas",
+                                      maxLines: 2, softWrap: true),
                                 ),
                                 Text(
                                   "Green M",
@@ -55,9 +51,7 @@ class CartView extends GetView<CartController> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      Text(
-                                        "\$299.00"
-                                      ),
+                                      Text("\$299.00"),
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Row(
@@ -72,7 +66,6 @@ class CartView extends GetView<CartController> {
                                               color: Colors.grey.shade700,
                                             ),
                                             Container(
-                                              color: Colors.grey.shade200,
                                               padding: const EdgeInsets.all(5),
                                               child: Text(
                                                 "1",
