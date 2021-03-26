@@ -2,7 +2,7 @@
 
 This Project contain : 
 
-Getx
+Getx and 
 Material Design 
 
 
