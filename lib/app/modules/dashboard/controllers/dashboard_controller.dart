@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class DashboardController extends GetxController {
   final currentIndex = 0.obs;
+
   @override
   void onInit() {
     super.onInit();

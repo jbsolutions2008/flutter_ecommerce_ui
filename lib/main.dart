@@ -11,6 +11,7 @@ void main() {
   runApp(
     GetMaterialApp(
       title: "Application",
+      debugShowCheckedModeBanner: false,
       initialRoute: AppPages.INITIAL,
       getPages: AppPages.routes,
       translationsKeys: AppTranslation.translations,
@@ -28,7 +29,6 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 3), () => Get.offNamed(Routes.LOGIN));
   }
