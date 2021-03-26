@@ -1,11 +1,17 @@
 import 'package:get/get.dart';
 
+import 'package:getx_demo_project/app/modules/cart/bindings/cart_binding.dart';
+import 'package:getx_demo_project/app/modules/cart/views/cart_view.dart';
+import 'package:getx_demo_project/app/modules/dashboard/bindings/dashboard_binding.dart';
+import 'package:getx_demo_project/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:getx_demo_project/app/modules/forgotpassword/bindings/forgotpassword_binding.dart';
 import 'package:getx_demo_project/app/modules/forgotpassword/views/forgotpassword_view.dart';
 import 'package:getx_demo_project/app/modules/home/bindings/home_binding.dart';
 import 'package:getx_demo_project/app/modules/home/views/home_view.dart';
 import 'package:getx_demo_project/app/modules/login/bindings/login_binding.dart';
 import 'package:getx_demo_project/app/modules/login/views/login_view.dart';
+import 'package:getx_demo_project/app/modules/setting/bindings/setting_binding.dart';
+import 'package:getx_demo_project/app/modules/setting/views/setting_view.dart';
 import 'package:getx_demo_project/app/modules/signup/bindings/signup_binding.dart';
 import 'package:getx_demo_project/app/modules/signup/views/signup_view.dart';
 
@@ -40,6 +46,21 @@ class AppPages {
       name: _Paths.FORGOTPASSWORD,
       page: () => ForgotpasswordView(),
       binding: ForgotpasswordBinding(),
+    ),
+    GetPage(
+      name: _Paths.DASHBOARD,
+      page: () => DashboardView(),
+      binding: DashboardBinding(),
+    ),
+    GetPage(
+      name: _Paths.SETTING,
+      page: () => SettingView(),
+      binding: SettingBinding(),
+    ),
+    GetPage(
+      name: _Paths.CART,
+      page: () => CartView(),
+      binding: CartBinding(),
     ),
   ];
 }

@@ -9,7 +9,7 @@ import '../controllers/login_controller.dart';
 
 class LoginView extends GetView<LoginController> {
   static AppBar appbar = AppBar(
-    title: Text('LoginView'),
+    title: Text(''),
     centerTitle: true,
   );
 
@@ -73,7 +73,7 @@ class LoginView extends GetView<LoginController> {
                       height: 50.0,
                       child: ElevatedButton(
                         child: Text(LocaleKeys.buttons_login.tr),
-                        onPressed: () => Get.toNamed(Routes.HOME),
+                        onPressed: () => Get.toNamed(Routes.DASHBOARD),
                       ),
                     ),
                     Padding(
@@ -105,6 +105,7 @@ class LoginView extends GetView<LoginController> {
                     LocaleKeys.notAccount.tr,
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
+                  SizedBox(width: 5,),
                   GestureDetector(
                     onTap: () {
                       Get.toNamed(Routes.SIGNUP);

@@ -1,7 +1,8 @@
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
-  final currentIndex = 0.obs;
+class CartController extends GetxController {
+
+  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -14,8 +15,5 @@ class HomeController extends GetxController {
 
   @override
   void onClose() {}
-
-  void onTapBottomNavigationItem(int index) {
-    currentIndex.value = index;
-  }
+  void increment() => count.value++;
 }
