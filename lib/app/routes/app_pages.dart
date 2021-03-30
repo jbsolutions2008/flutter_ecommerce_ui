@@ -10,6 +10,8 @@ import 'package:getx_demo_project/app/modules/home/bindings/home_binding.dart';
 import 'package:getx_demo_project/app/modules/home/views/home_view.dart';
 import 'package:getx_demo_project/app/modules/login/bindings/login_binding.dart';
 import 'package:getx_demo_project/app/modules/login/views/login_view.dart';
+import 'package:getx_demo_project/app/modules/product_detail/bindings/product_detail_binding.dart';
+import 'package:getx_demo_project/app/modules/product_detail/views/product_detail_view.dart';
 import 'package:getx_demo_project/app/modules/setting/bindings/setting_binding.dart';
 import 'package:getx_demo_project/app/modules/setting/views/setting_view.dart';
 import 'package:getx_demo_project/app/modules/signup/bindings/signup_binding.dart';
@@ -61,6 +63,12 @@ class AppPages {
       name: _Paths.CART,
       page: () => CartView(),
       binding: CartBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRODUCT_DETAIL,
+      page: () => ProductDetailView(),
+      binding: ProductDetailBinding(),
+      transitionDuration: Duration(milliseconds: 500)
     ),
   ];
 }

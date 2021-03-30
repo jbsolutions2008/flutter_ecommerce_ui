@@ -105,7 +105,9 @@ class LoginView extends GetView<LoginController> {
                     LocaleKeys.notAccount.tr,
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
-                  SizedBox(width: 5,),
+                  SizedBox(
+                    width: 5,
+                  ),
                   GestureDetector(
                     onTap: () {
                       Get.toNamed(Routes.SIGNUP);
