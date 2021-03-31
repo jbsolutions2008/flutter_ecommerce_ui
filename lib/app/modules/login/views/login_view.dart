@@ -97,27 +97,29 @@ class LoginView extends GetView<LoginController> {
                   ],
                 ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    LocaleKeys.notAccount.tr,
-                    style: Theme.of(context).textTheme.subtitle2,
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Get.toNamed(Routes.SIGNUP);
-                    },
-                    child: Text(
-                      LocaleKeys.txtSignUp.tr,
-                      style: TextStyle(fontSize: 17),
+              Expanded(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      LocaleKeys.notAccount.tr,
+                      style: Theme.of(context).textTheme.subtitle2,
                     ),
-                  ),
-                ],
+                    SizedBox(
+                      width: 5,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(Routes.SIGNUP);
+                      },
+                      child: Text(
+                        LocaleKeys.txtSignUp.tr,
+                        style: TextStyle(fontSize: 17),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

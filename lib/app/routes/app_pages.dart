@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import 'package:getx_demo_project/app/modules/cart/bindings/cart_binding.dart';
 import 'package:getx_demo_project/app/modules/cart/views/cart_view.dart';
+import 'package:getx_demo_project/app/modules/counter/bindings/counter_binding.dart';
+import 'package:getx_demo_project/app/modules/counter/views/counter_view.dart';
 import 'package:getx_demo_project/app/modules/dashboard/bindings/dashboard_binding.dart';
 import 'package:getx_demo_project/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:getx_demo_project/app/modules/forgotpassword/bindings/forgotpassword_binding.dart';
@@ -10,6 +12,8 @@ import 'package:getx_demo_project/app/modules/home/bindings/home_binding.dart';
 import 'package:getx_demo_project/app/modules/home/views/home_view.dart';
 import 'package:getx_demo_project/app/modules/login/bindings/login_binding.dart';
 import 'package:getx_demo_project/app/modules/login/views/login_view.dart';
+import 'package:getx_demo_project/app/modules/offer/bindings/offer_binding.dart';
+import 'package:getx_demo_project/app/modules/offer/views/offer_view.dart';
 import 'package:getx_demo_project/app/modules/product_detail/bindings/product_detail_binding.dart';
 import 'package:getx_demo_project/app/modules/product_detail/views/product_detail_view.dart';
 import 'package:getx_demo_project/app/modules/setting/bindings/setting_binding.dart';
@@ -65,10 +69,19 @@ class AppPages {
       binding: CartBinding(),
     ),
     GetPage(
-      name: _Paths.PRODUCT_DETAIL,
-      page: () => ProductDetailView(),
-      binding: ProductDetailBinding(),
-      transitionDuration: Duration(milliseconds: 500)
+        name: _Paths.PRODUCT_DETAIL,
+        page: () => ProductDetailView(),
+        binding: ProductDetailBinding(),
+        transitionDuration: Duration(milliseconds: 500)),
+    GetPage(
+      name: _Paths.COUNTER,
+      page: () => CounterView(),
+      binding: CounterBinding(),
+    ),
+    GetPage(
+      name: _Paths.OFFER,
+      page: () => OfferView(),
+      binding: OfferBinding(),
     ),
   ];
 }

@@ -1,11 +1,17 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo_project/app/modules/cart/controllers/cart_controller.dart';
+import 'package:getx_demo_project/app/modules/dashboard/controllers/dashboard_controller.dart';
 import 'package:getx_demo_project/app/modules/home/views/model/item.dart';
 import 'package:getx_demo_project/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
+  var crtl = Get.put(CartController());
+  var update = Get.put(DashboardController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,13 +26,12 @@ class HomeView extends GetView<HomeController> {
               debugPrint("Search");
             },
           ),
-          IconButton(
-            icon: const Icon(Icons.shopping_cart),
-            tooltip: 'Cart',
-            onPressed: () {
-              debugPrint("Cart");
-            },
-          )
+          Badge(
+              position: BadgePosition.topEnd(top: 0, end: 3),
+              child: IconButton( icon:  Icon(Icons.shopping_cart),onPressed: (){
+                update.changePage(2);
+              },),
+              badgeContent: Text(crtl.count.toString()))
         ],
       ),
       body: SingleChildScrollView(
@@ -110,20 +115,28 @@ class HomeView extends GetView<HomeController> {
                     return GestureDetector(
                       onTap: () =>
                           Get.toNamed(Routes.PRODUCT_DETAIL, arguments: index),
-                      child: Hero(
-                        tag: "anim$index",
-                        child: Container(
-                          margin: EdgeInsets.only(
-                              right: 8, left: 8, top: 0, bottom: 0),
-                          width: 150,
-                          height: 150,
-                          decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(14)),
-                              color: Colors.blue.shade200,
-                              image: DecorationImage(
-                                  image: AssetImage("images/shoes_1.png"))),
-                        ),
+                      child: Column(
+                        children: [
+                          Hero(
+                            tag: "anim$index",
+                            child: Container(
+                              margin: EdgeInsets.only(
+                                  right: 8, left: 8, top: 0, bottom: 0),
+                              width: 100,
+                              height: 100,
+                              decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(14)),
+                                  color: Colors.blue.shade200,
+                                  image: DecorationImage(
+                                      image: AssetImage("images/shoes_1.png"))),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("100")
+                        ],
                       ),
                     );
                   }),
@@ -154,16 +167,25 @@ class HomeView extends GetView<HomeController> {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () => Get.toNamed(Routes.PRODUCT_DETAIL),
-                    child: Container(
-                      margin:
-                          EdgeInsets.only(right: 8, left: 8, top: 0, bottom: 0),
-                      width: 150,
-                      height: 150,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(14)),
-                          color: Colors.blue.shade200,
-                          image: DecorationImage(
-                              image: AssetImage("images/shoes_1.png"))),
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(
+                              right: 8, left: 8, top: 0, bottom: 0),
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(14)),
+                              color: Colors.blue.shade200,
+                              image: DecorationImage(
+                                  image: AssetImage("images/shoes_1.png"))),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text("100")
+                      ],
                     ),
                   );
                 },
@@ -175,7 +197,7 @@ class HomeView extends GetView<HomeController> {
     );
   }
 
-  static List<Item> _choices = [
+  List<Item> _choices = [
     Item("All", Icon(Icons.all_out)),
     Item("Men", Icon(Icons.person)),
     Item("Women", Icon(Icons.perm_identity)),

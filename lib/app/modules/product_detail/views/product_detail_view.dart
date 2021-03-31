@@ -1,10 +1,16 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:getx_demo_project/app/modules/cart/controllers/cart_controller.dart';
+import 'package:getx_demo_project/app/modules/cart/model/product.dart';
 
 import '../controllers/product_detail_controller.dart';
 
 class ProductDetailView extends GetView<ProductDetailController> {
+  var cartItem = Get.put(CartController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +59,20 @@ class ProductDetailView extends GetView<ProductDetailController> {
             height: 50.0,
             child: ElevatedButton(
               child: Text("Add to Cart"),
-              onPressed: () => null,
+              onPressed: () {
+                {
+                  var product = Product(
+                      id: Random().nextInt(1000),
+                      productName: "Nike",
+                      productImage: "asa",
+                      productDescription: "shoes",
+                      price: 20,
+                      qty: 1);
+                  cartItem.addToCart(product);
+
+                  Get.back();
+                }
+              },
             ),
           )
         ],

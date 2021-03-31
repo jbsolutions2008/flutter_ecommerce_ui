@@ -1,27 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_demo_project/app/modules/cart/views/cart_view.dart';
-import 'package:getx_demo_project/app/modules/home/views/home_view.dart';
-import 'package:getx_demo_project/app/modules/setting/views/setting_view.dart';
+import 'package:getx_demo_project/app/routes/app_pages.dart';
 
 import '../controllers/dashboard_controller.dart';
 
 class DashboardView extends GetView<DashboardController> {
-  static List<Widget> _widgetOptions = <Widget>[
-    HomeView(),
-    Text(
-      'Index 1: Business',
-    ),
-    CartView(),
-    SettingView(),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child:
-            Obx(() => _widgetOptions.elementAt(controller.currentIndex.value)),
+      body: Navigator(
+        key: Get.nestedKey(1),
+        initialRoute: Routes.HOME,
+        onGenerateRoute: controller.onGenerateRoute,
       ),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
@@ -52,6 +42,6 @@ class DashboardView extends GetView<DashboardController> {
   }
 
   void _onItemTapped(int index) {
-    controller.onTapBottomNavigationItem(index);
+    controller.changePage(index);
   }
 }

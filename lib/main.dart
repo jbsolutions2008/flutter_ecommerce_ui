@@ -16,7 +16,7 @@ void main() {
       getPages: AppPages.routes,
       translationsKeys: AppTranslation.translations,
       locale: Locale('en', 'US'),
-      fallbackLocale: Locale('en','US'),
+      fallbackLocale: Locale('en', 'US'),
     ),
   );
 }
