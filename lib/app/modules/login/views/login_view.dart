@@ -114,8 +114,7 @@ class LoginView extends GetView<LoginController> {
                     },
                     child: Text(
                       LocaleKeys.txtSignUp.tr,
-                      style: TextStyle(
-                          color: Theme.of(context).primaryColor, fontSize: 17),
+                      style: TextStyle(fontSize: 17),
                     ),
                   ),
                 ],

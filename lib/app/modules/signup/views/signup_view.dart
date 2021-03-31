@@ -10,8 +10,7 @@ class SignupView extends GetView<SignupController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.white,
-          appBar: AppBar(
+         appBar: AppBar(
             title: Text("Sign up"),
           ),
           body: ListView(
@@ -22,6 +21,7 @@ class SignupView extends GetView<SignupController> {
                 height: 200,
                 width: 200,
               ),
+              SizedBox(height: 50.0),
               TextFormField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
