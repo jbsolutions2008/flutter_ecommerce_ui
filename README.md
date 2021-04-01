@@ -12,8 +12,8 @@ Ecommerce App Allows you to view list of items and details of a particular item.
 
 | Plugin | README |
 | ------ | ------ |
-| Get | [https://pub.dev/packages/get][PlDb] |
-| Get Cli | [https://pub.dev/packages/get_cli][PlGh] |
+| Get | [https://pub.dev/packages/get] |
+| Get Cli | [https://pub.dev/packages/get_cli]|
 
 ## :bulb: Motivation and Context
 
