@@ -21,7 +21,14 @@ Ecommerce App Allows you to view list of items and details of a particular item.
 	10 ) Checkout 
 	
 	
-	This is fully used Getx Package. 
+You can perform a dummy operation like :
+- add item in cart 
+- delete item 
+- qty updation 
+- auto calculate the price 
+-  place order 
+- budge update 
+
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
