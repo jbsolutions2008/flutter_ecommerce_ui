@@ -29,6 +29,8 @@ App has following screens :
 	- Setting 
 	- Item detail 
 	- Checkout 
+	- Dark and Light mode support 
+	- Localization
 	
 	
 You can perform a dummy operation like :
