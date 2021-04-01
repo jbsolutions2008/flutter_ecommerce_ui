@@ -1,12 +1,19 @@
+[![JB](https://www.jbsolutions.in/images/logo.png)](https://www.jbsolutions.in/)
+
 # Ecommerce 
 > E-Commerce app UI design in flutter
 
 
-[![JB](https://www.jbsolutions.in/images/logo.png)](https://www.jbsolutions.in/)
-
 ## :scroll: Description
-Ecommerce App Allows you to view list of items and details of a particular item. The app is build  in getX package.
+Ecommerce App Allows you to view list of items and details of a particular item.
 
+
+## Plugins
+
+| Plugin | README |
+| ------ | ------ |
+| Get | [https://pub.dev/packages/get][PlDb] |
+| Get Cli | [https://pub.dev/packages/get_cli][PlGh] |
 
 ## :bulb: Motivation and Context
 
