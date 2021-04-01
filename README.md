@@ -21,7 +21,7 @@ Ecommerce App Allows you to view list of items and details of a particular item.
 	10 ) Checkout 
 	
 	
-	This is fully used Gex Packagae. 
+	This is fully used Gex Package. 
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
