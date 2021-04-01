@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-
 import 'package:getx_demo_project/app/modules/cart/bindings/cart_binding.dart';
 import 'package:getx_demo_project/app/modules/cart/views/cart_view.dart';
 import 'package:getx_demo_project/app/modules/counter/bindings/counter_binding.dart';
@@ -69,10 +68,10 @@ class AppPages {
       binding: CartBinding(),
     ),
     GetPage(
-        name: _Paths.PRODUCT_DETAIL,
-        page: () => ProductDetailView(),
-        binding: ProductDetailBinding(),
-        transitionDuration: Duration(milliseconds: 500)),
+      name: _Paths.PRODUCT_DETAIL,
+      page: () => ProductDetailView(),
+      binding: ProductDetailBinding(),
+    ),
     GetPage(
       name: _Paths.COUNTER,
       page: () => CounterView(),

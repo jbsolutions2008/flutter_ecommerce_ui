@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 class ProductDetailController extends GetxController {
   //TODO: Implement ProductDetailController
 
-  final count = 0.obs;
+  final current = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
@@ -16,5 +17,6 @@ class ProductDetailController extends GetxController {
 
   @override
   void onClose() {}
-  void increment() => count.value++;
+
+  void changeImage(index) => current.value = index;
 }
