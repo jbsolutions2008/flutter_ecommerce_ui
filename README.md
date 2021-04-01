@@ -39,7 +39,7 @@ You can perform a dummy operation like :
 - qty updation 
 - auto calculate the price 
 - place order 
-- badge update 
+- auto badge update 
 
 
 ## :camera_flash: Screenshots
