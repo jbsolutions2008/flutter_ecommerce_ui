@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import 'package:getx_demo_project/app/modules/cart/bindings/cart_binding.dart';
 import 'package:getx_demo_project/app/modules/cart/views/cart_view.dart';
+import 'package:getx_demo_project/app/modules/checkout/bindings/checkout_binding.dart';
+import 'package:getx_demo_project/app/modules/checkout/views/checkout_view.dart';
 import 'package:getx_demo_project/app/modules/counter/bindings/counter_binding.dart';
 import 'package:getx_demo_project/app/modules/counter/views/counter_view.dart';
 import 'package:getx_demo_project/app/modules/dashboard/bindings/dashboard_binding.dart';
@@ -82,6 +84,11 @@ class AppPages {
       name: _Paths.OFFER,
       page: () => OfferView(),
       binding: OfferBinding(),
+    ),
+    GetPage(
+      name: _Paths.CHECKOUT,
+      page: () => CheckoutView(),
+      binding: CheckoutBinding(),
     ),
   ];
 }

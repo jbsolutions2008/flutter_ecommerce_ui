@@ -13,7 +13,7 @@ class OfferView extends GetView<OfferController> {
       ),
       body: Center(
         child: Text(
-          'OfferView is working',
+          'Offer',
           style: TextStyle(fontSize: 20),
         ),
       ),

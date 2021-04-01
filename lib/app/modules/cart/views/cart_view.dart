@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo_project/app/modules/cart/model/product.dart';
+import 'package:getx_demo_project/app/routes/app_pages.dart';
 
 import '../controllers/cart_controller.dart';
 
@@ -65,8 +66,10 @@ class CartView extends GetView<CartController> {
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
                                           children: <Widget>[
-                                            Text(controller
-                                                .cartItems[index].price
+                                            Text((controller.cartItems[index]
+                                                        .price *
+                                                    controller
+                                                        .cartItems[index].qty)
                                                 .toString()),
                                             Padding(
                                               padding:
@@ -137,16 +140,23 @@ class CartView extends GetView<CartController> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Center(
-                          child: Obx(() => Text(
-                              "Total :" + controller.totalPrice.toString(),
-                            style: TextStyle(color: Colors.black),
-                          ),
-                          )),
+                          child: Obx(
+                        () => Text(
+                          "Total :" + controller.totalPrice.toString(),
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      )),
                     ),
-                    SizedBox(width: 50,),
-                    Obx(()=>controller.count>0?ElevatedButton(onPressed: (){
-                    }, child:Text("Checkout")):SizedBox())
-
+                    SizedBox(
+                      width: 50,
+                    ),
+                    Obx(() => controller.count > 0
+                        ? ElevatedButton(
+                            onPressed: () {
+                              Get.offNamed(Routes.CHECKOUT);
+                            },
+                            child: Text("Place Order"))
+                        : SizedBox())
                   ],
                 )),
           )),
@@ -154,7 +164,7 @@ class CartView extends GetView<CartController> {
             child: Icon(Icons.add),
             onPressed: () {
               {
-                var  product = Product(
+                var product = Product(
                     id: Random().nextInt(1000),
                     productName: "Nike",
                     productImage: "asa",
@@ -169,6 +179,4 @@ class CartView extends GetView<CartController> {
       ),
     );
   }
-
-
 }

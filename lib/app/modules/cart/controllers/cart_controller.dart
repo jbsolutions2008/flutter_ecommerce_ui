@@ -61,4 +61,8 @@ class CartController extends GetxController {
   void updateItem(int pos, Product product) {
     cartItems[pos] = product;
   }
+
+  void clearAll() {
+    cartItems.clear();
+  }
 }

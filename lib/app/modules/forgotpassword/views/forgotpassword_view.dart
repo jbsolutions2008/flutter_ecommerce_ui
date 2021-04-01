@@ -64,7 +64,7 @@ class ForgotpasswordView extends GetView<ForgotpasswordController> {
             TextButton(
               child: Text('OK'),
               onPressed: () {
-                Navigator.of(context).pop();
+                Get.back();
               },
             ),
           ],
