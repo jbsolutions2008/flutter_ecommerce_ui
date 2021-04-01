@@ -1,5 +1,5 @@
 # Ecommerce 
-> Simple E-Commerce app ui design in flutter
+> E-Commerce app UI design in flutter
 
 ## :scroll: Description
 Ecommerce App Allows you to view list of items and details of a particular item. The app is build  in getX package.
