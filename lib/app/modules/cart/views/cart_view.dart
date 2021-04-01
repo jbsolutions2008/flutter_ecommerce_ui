@@ -143,7 +143,7 @@ class CartView extends GetView<CartController> {
                           child: Obx(
                         () => Text(
                           "Total :" + controller.totalPrice.toString(),
-                          style: TextStyle(color: Colors.black),
+                          style: TextStyle(color: Get.isDarkMode?Colors.white:Colors.black),
                         ),
                       )),
                     ),
