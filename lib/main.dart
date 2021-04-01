@@ -40,7 +40,7 @@ class _SplashViewState extends State<SplashView> {
         backgroundColor: Colors.white,
         body: Center(
           child: Image.asset(
-            'images/ecommerce.webp',
+            'images/flutter.png',
             height: 200,
             width: 200,
           ),

@@ -158,7 +158,7 @@ class CheckoutView extends GetView<CheckoutController> {
                             ));
                       })
                   : Center(child: Text("cart is empty.")),
-              SizedBox(height: 50),
+              SizedBox(height: 30),
               Row(
                 children: [
                   SizedBox(
@@ -174,7 +174,6 @@ class CheckoutView extends GetView<CheckoutController> {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
               Row(
                 children: [
                   SizedBox(
@@ -189,7 +188,6 @@ class CheckoutView extends GetView<CheckoutController> {
               ),
               SizedBox(height: 10),
               dashedHorizontalLine(),
-              SizedBox(height: 10),
               Row(
                 children: [
                   SizedBox(
@@ -211,12 +209,13 @@ class CheckoutView extends GetView<CheckoutController> {
                   SizedBox(
                     width: 30,
                   ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    // Align however you like (i.e .centerRight, centerLeft)
-                    child: Text(
-                        "4/53,Street no.10,Sector 34,Dlf Phase 2 Mumbai,India,10001"),
-                  ),
+                  FittedBox(
+                    fit: BoxFit.cover,
+                    child:
+                    Text(
+                      "4/53,Street no.10,Sector 34,Dlf Phase 2 \n Mumbai,India,10001",
+                      //style: TextStyle(fontSize: 18),
+                    ),),
                 ],
               ),
             ],

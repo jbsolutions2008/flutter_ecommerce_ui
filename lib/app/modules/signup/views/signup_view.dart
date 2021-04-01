@@ -17,9 +17,9 @@ class SignupView extends GetView<SignupController> {
             padding: const EdgeInsets.all(16.0),
             children: <Widget>[
               Image.asset(
-                'images/ecommerce.webp',
-                height: 200,
-                width: 200,
+                'images/flutter.png',
+                height: 100,
+                width: 100,
               ),
               SizedBox(height: 50.0),
               TextFormField(

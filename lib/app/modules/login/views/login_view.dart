@@ -131,50 +131,28 @@ class LoginView extends GetView<LoginController> {
   changeLanguage(context) {
     Get.bottomSheet(
       Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(
-            height: 20.0,
-          ),
-          Text(
-            "Change Language",
-            style: Theme.of(context).textTheme.headline6,
-          ),
-          SizedBox(
-            height: 15.0,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              width: double.infinity,
-              height: 50.0,
-              child: TextButton(
-                child: Text("English"),
-                onPressed: () => {
-                  Get.updateLocale(Locale('en', 'US')),
-                  Get.back(),
-                },
-              ),
-            ),
-          ),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              width: double.infinity,
-              height: 50.0,
-              child: TextButton(
-                child: Text("Hindi"),
-                onPressed: () => {
-                  Get.updateLocale(Locale('hi', 'IN')),
-                  Get.back(),
-                },
-              ),
-            ),
-          ),
+          SizedBox(height: 10),
+          Text("Change Language", style: Theme.of(context).textTheme.headline6),
+          ListTile(
+              title: Text("English"),
+              trailing: Icon(Icons.chevron_right),
+              onTap: () {
+                Get.updateLocale(Locale('en', 'US'));
+                Get.back();
+              }),
+          ListTile(
+              title: Text("Hindi"),
+              trailing: Icon(Icons.chevron_right),
+              onTap: () {
+                Get.updateLocale(Locale('hi', 'IN'));
+                Get.back();
+              })
         ],
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Get.isDarkMode ? Colors.black : Colors.white,
       persistent: false,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusDirectional.only(
