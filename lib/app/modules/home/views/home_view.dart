@@ -28,9 +28,12 @@ class HomeView extends GetView<HomeController> {
           ),
           Badge(
               position: BadgePosition.topEnd(top: 0, end: 3),
-              child: IconButton( icon:  Icon(Icons.shopping_cart),onPressed: (){
-                update.changePage(2);
-              },),
+              child: IconButton(
+                icon: Icon(Icons.shopping_cart),
+                onPressed: () {
+                  update.changePage(2);
+                },
+              ),
               badgeContent: Text(crtl.count.toString()))
         ],
       ),
@@ -198,11 +201,11 @@ class HomeView extends GetView<HomeController> {
   }
 
   List<Item> _choices = [
-    Item("All", Icon(Icons.all_out)),
+    Item("All", Icon(Icons.clear_all_rounded)),
     Item("Men", Icon(Icons.person)),
-    Item("Women", Icon(Icons.perm_identity)),
-    Item("Fashion", Icon(Icons.face_sharp)),
-    Item("Baby", Icon(Icons.baby_changing_station)),
-    Item("Kids", Icon(Icons.keyboard_hide_sharp))
+    Item("Women", Icon(Icons.emoji_people_sharp)),
+    Item("Fashion", Icon(Icons.shopping_bag)),
+    Item("Baby", Icon(Icons.child_care)),
+    Item("Kids", Icon(Icons.face_sharp))
   ];
 }
