@@ -1,5 +1,5 @@
 # Ecommerce 
-> Simple E-Commerce app ui design
+> Simple E-Commerce app ui design in flutter
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
