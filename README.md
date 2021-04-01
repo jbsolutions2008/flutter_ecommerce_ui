@@ -6,19 +6,19 @@ Ecommerce App Allows you to view list of items and details of a particular item.
 
 
 ## :bulb: Motivation and Context
-<!--- Optionally point readers to interesting parts of your submission. -->
-   App has following screens :
+
+App has following screens :
 	
-	1 ) Splash screen 
-	2 ) Login 
-	3 ) Register 
-	4 ) Forgot password 
-	5 ) Home 
-	6 ) Offers
-	7 ) Cart management 
-	8 ) Setting 
-	9 ) Item detail 
-	10 ) Checkout 
+	- Splash screen 
+	- Login 
+	- Register 
+	- Forgot password 
+	- Home 
+	- Offers
+	- Cart management 
+	- Setting 
+	- Item detail 
+	- Checkout 
 	
 	
 You can perform a dummy operation like :
@@ -26,8 +26,8 @@ You can perform a dummy operation like :
 - delete item 
 - qty updation 
 - auto calculate the price 
--  place order 
-- budge update 
+- place order 
+- badge update 
 
 
 ## :camera_flash: Screenshots
