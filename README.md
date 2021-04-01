@@ -1,5 +1,5 @@
 # Ecommerce 
-
+> Simple E-Commerce app ui design
 
 ## :scroll: Description
 <!--- Describe your app in one or two sentences -->
